@@ -29,4 +29,6 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Chara)
 	class APawn* myPawn;
+
+	bool IsA;
 };

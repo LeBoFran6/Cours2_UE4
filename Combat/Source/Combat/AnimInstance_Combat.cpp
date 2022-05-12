@@ -7,6 +7,7 @@ void UAnimInstance_Combat::NativeInitializeAnimation() {
 
 	if (myPawn == nullptr) {
 		myPawn = TryGetPawnOwner();
+		//myPawn->InputComponent->BindAction("Fire", IE_Pressed, this, &ACharacter::Fire);
 
 	}
 }
@@ -20,3 +21,7 @@ void UAnimInstance_Combat::UpdateAnimationAxis() {
 		vSpeed = speedVec.Z;
 	}
 }
+/*
+void UAnimInstance_Combat::Fire() {
+	UE_LOG(LogTemp, Warning, TEXT("Fire"));
+}*/

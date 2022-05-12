@@ -49,6 +49,9 @@ void ACharacter_CPP::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	check(PlayerInputComponent);
 
 	// ACTION
+	//PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &ACharacter::Fire);
+
+
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump",IE_Released, this, &ACharacter::StopJumping);
 
@@ -91,4 +94,10 @@ void ACharacter_CPP::Turn(float Value) {
 
 void ACharacter_CPP::LookUp(float Value) {
 	AddControllerPitchInput(Value * lookUpRate * GetWorld()->GetDeltaSeconds());
+}
+
+void ACharacter_CPP::Fire() {
+	if (Controller != nullptr) {
+		isA2 = true;
+	}
 }

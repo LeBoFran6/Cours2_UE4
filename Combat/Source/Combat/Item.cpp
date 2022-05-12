@@ -42,10 +42,11 @@ void AItem::EquipWeapon(class ACharacter_CPP* myChar) {
 
 	Weapon->SetSimulatePhysics(false);
 
-	const USkeletalMeshSocket* weaponSocket = myChar->GetMesh()->GetSocketByName("Weapon_Socket");
+	const USkeletalMeshSocket* weaponSocket = myChar->GetMesh()->GetSocketByName("RightHandThumb4Socket_0");
 
 	if (weaponSocket) {
 		weaponSocket->AttachActor(this, myChar->GetMesh());
+		GotW = true;
 	}
 
 
@@ -108,14 +109,18 @@ void AItem::Tick(float DeltaTime)
 	SetActorLocation(NewLocation);
 	*/
 
-	FVector NewLocation = GetActorLocation();
-	FRotator NewRotation = GetActorRotation();
-	float RunningTime = GetGameTimeSinceCreation();
-	float DeltaHeight = (FMath::Sin(RunningTime + DeltaTime) - FMath::Sin(RunningTime));
-	NewLocation.Z += DeltaHeight * 20.0f;       //Scale our height by a factor of 20
-	float DeltaRotation = DeltaTime * 20.0f;    //Rotate by 20 degrees per second
-	NewRotation.Yaw += DeltaRotation;
-	SetActorLocationAndRotation(NewLocation, NewRotation);
+
+	if (GotW == false) {
+		FVector NewLocation = GetActorLocation();
+		FRotator NewRotation = GetActorRotation();
+		float RunningTime = GetGameTimeSinceCreation();
+		float DeltaHeight = (FMath::Sin(RunningTime + DeltaTime) - FMath::Sin(RunningTime));
+		NewLocation.Z += DeltaHeight * 20.0f;       //Scale our height by a factor of 20
+		float DeltaRotation = DeltaTime * 50.0f;    //Rotate by 20 degrees per second
+		NewRotation.Yaw += DeltaRotation;
+		SetActorLocationAndRotation(NewLocation, NewRotation);
+
+	}
 
 
 }
@@ -126,3 +131,7 @@ void AItem::OnOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* Other
 {
 	UE_LOG(LogTemp, Warning, TEXT("END COLLISION"));
 }
+
+
+
+

@@ -27,6 +27,8 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
 	float lookUpRate;
 
+	bool isA2;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -45,4 +47,6 @@ public:
 	// ROT
 	void Turn(float Value);
 	void LookUp(float Value);
+
+	void Fire();
 };
