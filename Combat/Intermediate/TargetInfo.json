@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "Combat",
-			"Path": "C:\\Users\\game2\\Desktop\\UnrealCours2\\Combat\\Source\\Combat.Target.cs",
+			"Path": "C:\\Users\\game2\\Desktop\\Cours2_UE4\\Combat\\Source\\Combat.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "CombatEditor",
-			"Path": "C:\\Users\\game2\\Desktop\\UnrealCours2\\Combat\\Source\\CombatEditor.Target.cs",
+			"Path": "C:\\Users\\game2\\Desktop\\Cours2_UE4\\Combat\\Source\\CombatEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]
