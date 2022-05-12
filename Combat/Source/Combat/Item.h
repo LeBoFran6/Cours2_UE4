@@ -6,6 +6,9 @@
 #include "GameFramework/Actor.h"
 #include "Item.generated.h"
 
+
+
+
 UCLASS()
 class COMBAT_API AItem : public AActor
 {
@@ -23,6 +26,10 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ITEMS | Particles")
 		class UParticleSystemComponent* IdleParticle;
+
+	//Skeleton mesh
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "WEAPON | myWeapon")
+		class USkeletalMeshComponent* Weapon;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ITEMS | Particles")
 		class UParticleSystem* overlapParticle;
@@ -56,5 +63,9 @@ public:
 	UFUNCTION()
 	virtual void OnOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
+	
 
+	void EquipWeapon(class ACharacter_CPP* myChar);
+
+	
 };

@@ -7,6 +7,9 @@
 #include "Kismet/GameplayStatics.h"
 #include "Engine/World.h"
 #include "Sound/SoundCue.h"
+#include "Engine/SkeletalMeshSocket.h"
+#include "Character_CPP.h"
+
 
 void AItem::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
@@ -21,7 +24,33 @@ void AItem::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* Oth
 		UGameplayStatics::PlaySound2D(this, overlapSound);
 	}
 
+	if (OtherActor) {
+
+		ACharacter_CPP* curChar = Cast<ACharacter_CPP>(OtherActor);
+
+		if (curChar) {
+			EquipWeapon(curChar);
+		}
+	}
+
 	//Destroy();
+}
+
+void AItem::EquipWeapon(class ACharacter_CPP* myChar) {
+	Weapon->SetCollisionResponseToChannel(ECollisionChannel::ECC_Camera, ECollisionResponse::ECR_Ignore);
+	Weapon->SetCollisionResponseToChannel(ECollisionChannel::ECC_Pawn, ECollisionResponse::ECR_Ignore);
+
+	Weapon->SetSimulatePhysics(false);
+
+	const USkeletalMeshSocket* weaponSocket = myChar->GetMesh()->GetSocketByName("Weapon_Socket");
+
+	if (weaponSocket) {
+		weaponSocket->AttachActor(this, myChar->GetMesh());
+	}
+
+
+
+
 }
 
 // Sets default values
@@ -36,6 +65,11 @@ AItem::AItem()
 
 	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	Mesh->SetupAttachment(GetRootComponent());
+
+	Weapon = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Weapon"));
+	Weapon->SetupAttachment(GetRootComponent());
+
+
 
 	//Particles
 	IdleParticle = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("Idle_Particles"));

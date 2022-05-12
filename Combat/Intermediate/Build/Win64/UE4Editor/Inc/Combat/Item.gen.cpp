@@ -23,6 +23,7 @@ void EmptyLinkFunctionForGeneratedCodeItem() {}
 	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UParticleSystemComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UParticleSystem_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USoundCue_NoRegister();
 // End Cross Module References
@@ -224,6 +225,10 @@ void EmptyLinkFunctionForGeneratedCodeItem() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_IdleParticle;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Weapon_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Weapon;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_overlapParticle_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_overlapParticle;
@@ -274,6 +279,16 @@ void EmptyLinkFunctionForGeneratedCodeItem() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AItem_Statics::NewProp_IdleParticle = { "IdleParticle", nullptr, (EPropertyFlags)0x001000000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AItem, IdleParticle), Z_Construct_UClass_UParticleSystemComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AItem_Statics::NewProp_IdleParticle_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AItem_Statics::NewProp_IdleParticle_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AItem_Statics::NewProp_Weapon_MetaData[] = {
+		{ "Category", "WEAPON | myWeapon" },
+		{ "Comment", "//Skeleton mesh\n" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Item.h" },
+		{ "ToolTip", "Skeleton mesh" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AItem_Statics::NewProp_Weapon = { "Weapon", nullptr, (EPropertyFlags)0x001000000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AItem, Weapon), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AItem_Statics::NewProp_Weapon_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AItem_Statics::NewProp_Weapon_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AItem_Statics::NewProp_overlapParticle_MetaData[] = {
 		{ "Category", "ITEMS | Particles" },
 		{ "ModuleRelativePath", "Item.h" },
@@ -291,6 +306,7 @@ void EmptyLinkFunctionForGeneratedCodeItem() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItem_Statics::NewProp_CollideSphere,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItem_Statics::NewProp_Mesh,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItem_Statics::NewProp_IdleParticle,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItem_Statics::NewProp_Weapon,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItem_Statics::NewProp_overlapParticle,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItem_Statics::NewProp_overlapSound,
 	};
@@ -321,7 +337,7 @@ void EmptyLinkFunctionForGeneratedCodeItem() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AItem, 2115991206);
+	IMPLEMENT_CLASS(AItem, 2808857330);
 	template<> COMBAT_API UClass* StaticClass<AItem>()
 	{
 		return AItem::StaticClass();

@@ -1,3 +1,4 @@
-﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\game2\Desktop\UnrealCours2).
-UnrealBuildTool : error : Unable to delete hot-reload file: C:\Users\game2\Desktop\UnrealCours2\Combat\Binaries\Win64\UE4Editor-Combat-0139.dll
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.MakeFile.Targets(45,5): error MSB3073: La commande ""C:\Program Files\Epic Games\UE_4.27\Engine\Build\BatchFiles\Build.bat" CombatEditor Win64 Development -Project="C:\Users\game2\Desktop\UnrealCours2\Combat\Combat.uproject" -WaitMutex -FromMsBuild" s'est arrêtée avec le code 6.
+﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\game2\Desktop\Cours2_UE4).
+  Creating makefile for CombatEditor (no existing makefile)
+UnrealBuildTool : error : Unable to delete hot-reload file: C:\Users\game2\Desktop\Cours2_UE4\Combat\Binaries\Win64\UE4Editor-Combat-1219.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.MakeFile.Targets(45,5): error MSB3073: La commande ""C:\Program Files\Epic Games\UE_4.27\Engine\Build\BatchFiles\Build.bat" CombatEditor Win64 Development -Project="C:\Users\game2\Desktop\Cours2_UE4\Combat\Combat.uproject" -WaitMutex -FromMsBuild" s'est arrêtée avec le code 6.
