@@ -1999,3 +1999,22 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2022.05.12-15.40.16:364][260]Display: HotReload successful (3 functions remapped  0 scriptstructs remapped)
 [2022.05.12-15.40.16:454][260]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0138 seconds. Added 3828 classes and 932 folders.
 [2022.05.12-15.40.16:454][260]Display: HotReload took  2.4s.
+[2022.05.12-15.40.59:472][487]LogUObjectHash: Compacting FUObjectHashTables data took   5.32ms
+[2022.05.12-15.40.59:511][487]LogSavePackage: Moving '../../../../../../Users/game2/Desktop/Cours2_UE4/Combat/Saved/ThirdPersonExampleMap_Auto27CBF92464C78BD88F5F5979EBB878E29.tmp' to '../../../../../../Users/game2/Desktop/Cours2_UE4/Combat/Saved/Autosaves/Game/ThirdPersonCPP/Maps/ThirdPersonExampleMap_Auto2.umap'
+[2022.05.12-15.40.59:514][487]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/ThirdPersonCPP/Maps/ThirdPersonExampleMap' took 0.141
+[2022.05.12-15.40.59:514][487]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.141
+[2022.05.12-15.40.59:515][487]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Sounds/sound-effect-hd] ([1] browsable assets)...
+[2022.05.12-15.40.59:519][487]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/Sounds/sound-effect-hd.sound-effect-hd]
+[2022.05.12-15.40.59:519][487]OBJ SavePackage: Finished generating thumbnails for package [/Game/Sounds/sound-effect-hd]
+[2022.05.12-15.40.59:524][487]LogSavePackage: Moving '../../../../../../Users/game2/Desktop/Cours2_UE4/Combat/Saved/sound-effect-hd_Auto24B8045FA48C1D0D5FB080B944B65012F.tmp' to '../../../../../../Users/game2/Desktop/Cours2_UE4/Combat/Saved/Autosaves/Game/Sounds/sound-effect-hd_Auto2.uasset'
+[2022.05.12-15.40.59:525][487]LogFileHelpers: Auto-saving content packages took 0.011
+[2022.05.12-15.41.09:473][579]LogUObjectHash: Compacting FUObjectHashTables data took   2.11ms
+[2022.05.12-15.41.10:924][579]LogSlate: Window 'Save Content' being destroyed
+[2022.05.12-15.41.10:949][579]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Sounds/sound-effect-hd" FILE="../../../../../../Users/game2/Desktop/Cours2_UE4/Combat/Content/Sounds/sound-effect-hd.uasset" SILENT=true
+[2022.05.12-15.41.10:952][579]LogSavePackage: Moving '../../../../../../Users/game2/Desktop/Cours2_UE4/Combat/Saved/sound-effect-hdD326711D4755936555957495BB2738D4.tmp' to '../../../../../../Users/game2/Desktop/Cours2_UE4/Combat/Content/Sounds/sound-effect-hd.uasset'
+[2022.05.12-15.41.10:972][579]LogUObjectHash: Compacting FUObjectHashTables data took   0.60ms
+[2022.05.12-15.41.10:997][579]LogSavePackage: Moving '../../../../../../Users/game2/Desktop/Cours2_UE4/Combat/Saved/ThirdPersonExampleMap6B61595C4C2B94080DD0BE8230A881AF.tmp' to '../../../../../../Users/game2/Desktop/Cours2_UE4/Combat/Content/ThirdPersonCPP/Maps/ThirdPersonExampleMap.umap'
+[2022.05.12-15.41.11:023][579]LogFileHelpers: Saving map 'ThirdPersonExampleMap' took 0.070
+[2022.05.12-15.41.11:044][579]AssetCheck: New page: Asset Save: multiple assets
+[2022.05.12-15.41.11:044][579]LogContentValidation: Display: Validating World /Game/ThirdPersonCPP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap
+[2022.05.12-15.41.11:044][579]LogContentValidation: Display: Validating SoundWave /Game/Sounds/sound-effect-hd.sound-effect-hd
