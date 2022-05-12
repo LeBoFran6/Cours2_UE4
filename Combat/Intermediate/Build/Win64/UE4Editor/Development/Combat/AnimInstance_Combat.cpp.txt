@@ -1,0 +1,3 @@
+C:\Users\game2\Desktop\UnrealCours2\Combat\Intermediate\Build\Win64\UE4Editor\Development\Combat\Definitions.Combat.h
+C:\Users\game2\Desktop\UnrealCours2\Combat\Source\Combat\AnimInstance_Combat.h
+C:\Users\game2\Desktop\UnrealCours2\Combat\Intermediate\Build\Win64\UE4Editor\Inc\Combat\AnimInstance_Combat.generated.h
